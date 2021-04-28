@@ -8,8 +8,8 @@ class food{
     }
 
     update(){
-        this.x = (Math.floor(Math.random()* (19-0)) + 0) * this.grid;
-        this.y = (Math.floor(Math.random()* (19-0)) + 0) * this.grid;
+        this.x = (Math.floor(Math.random()* (20-1)) + 1) * this.grid;
+        this.y = (Math.floor(Math.random()* (20-1)) + 1) * this.grid;
 
     }
 

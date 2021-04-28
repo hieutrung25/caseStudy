@@ -2,12 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Snake Stupid</title>
+    <title>Snake</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!--<audio controls autoplay loop>-->
+<!--    <source src="https://zingmp3.vn/bai-hat/Hoa-May-Co-Giang-Tinh-2-X2X/ZWD0B66D.html" type="audio/mpeg">-->
+<!--</audio>-->
 
+<!--<script>-->
+<!--    //Để lưu dữ liệu trên trình duyệt - localstorage-->
+<!--    let highScore = +loadData();-->
+<!--    let user = loadDataArray();-->
+<!--    function randomScore() {-->
+<!--        let score = Math.floor(Math.random()*100);-->
+
+<!--        document.getElementById('score').innerHTML = score;-->
+<!--        // highScore.push(score);-->
+<!--        if(score > highScore){-->
+<!--            let name = prompt('Nhập tên');-->
+<!--            let user = [name,score];-->
+<!--            highScore = score;-->
+<!--            saveData();-->
+<!--            saveDataArray(user);-->
+<!--            displayHighScore();-->
+<!--        }-->
+<!--    }-->
+<!--    function displayHighScore() {-->
+<!--        document.getElementById('high-score').innerHTML = highScore;-->
+<!--        document.getElementById('high-score2').innerHTML = user[0]+" : "+user[1];-->
+
+<!--    }-->
+
+<!--    function saveData() {-->
+<!--        localStorage.setItem('score',highScore);-->
+<!--    }-->
+<!--    function loadData() {-->
+<!--        if(localStorage.hasOwnProperty('score')){-->
+<!--            return localStorage.getItem('score');-->
+<!--        }else {-->
+<!--            return 0;-->
+<!--        }-->
+<!--    }-->
+
+<!--    function saveDataArray(arr) {-->
+<!--        localStorage.setItem('user',JSON.stringify(arr));-->
+<!--    }-->
+<!--    function loadDataArray() {-->
+<!--        if(localStorage.hasOwnProperty('user')){-->
+<!--            return JSON.parse(localStorage.getItem('user'));-->
+<!--        }else {-->
+<!--            return [];-->
+<!--        }-->
+<!--    }-->
+<!--    displayHighScore();-->
+<!--</script>-->
 </body>
+
 <script src="snake.js"></script>
 <script src="food.js"></script>
 <script src="game.js"></script>

@@ -2,10 +2,10 @@ class game{
     constructor() {
         this.canvas = null;
         this.context = null;
-        this.init();
+        this.can();
         this.loop();
     }
-    init(){
+    can(){
         this.canvas = document.createElement('canvas');
         this.context = this.canvas.getContext('2d');
         this.canvas.width = 400;
@@ -13,6 +13,7 @@ class game{
         document.body.appendChild(this.canvas);
         this.snake = new snake(this);
         this.food = new food(this);
+
     }
     loop(){
         this.update();

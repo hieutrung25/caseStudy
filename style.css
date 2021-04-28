@@ -5,3 +5,13 @@ body{
 canvas {
     border: 2px solid white;
 }
+
+.button {
+    background-color: deeppink;
+    border: 5px solid aqua;
+    color: white;
+    font-size: xx-large;
+    padding: 15px 32px;
+    margin: 200px 700px;
+    cursor: pointer;
+}

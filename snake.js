@@ -41,37 +41,41 @@ class snake{
             this.game.context.fillStyle = 'white';
             this.game.context.fillRect(this.cell[i].x, this.cell[i].y, this.grid, this.grid);
         }
+        if(!this.endGame()){
+            this.game.context.font = '20px Arial';
+            this.game.context.fillText("Lose! Try again!", 140, 200);
+        }
     }
     Bottom(){
         document.addEventListener('keydown', (e) => {
-            if (e.which == 37 && this.dx == 0){
+            if (e.which === 37 && this.dx === 0){
                 this.dx = -this.grid;
                 this.dy = 0;
             }
-            else if (e.which == 38 && this.dy == 0){
+            else if (e.which === 38 && this.dy === 0){
                 this.dx = 0;
                 this.dy = -this.grid;
             }
-            else if (e.which == 39 && this.dx == 0){
+            else if (e.which === 39 && this.dx === 0){
                 this.dx = this.grid;
                 this.dy = 0;
             }
-            else if (e.which == 40 && this.dy == 0){
+            else if (e.which === 40 && this.dy === 0){
                 this.dx = 0;
                 this.dy = this.grid;
             }
         });
     }
     eat(x,y) {
-        if (this.x == x && this.y == y){
+        if (this.x === x && this.y === y){
             this.maxCells++;
             return true;
         }
         return false;
     }
     endGame(){
-        for (let i = 0; i < this.cell.length; i++){
-            if (this.x == this.cell[i].x && this.y == this.cell[i].y) {
+        for (let i = 1; i < this.cell.length; i++){
+            if (this.x === this.cell[i].x && this.y === this.cell[i].y) {
                 return false;
             }
         }
