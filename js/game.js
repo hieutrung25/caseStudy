@@ -19,7 +19,7 @@ class game{
     loop(){
         this.update();
         this.draw();
-        setTimeout(() => this.loop(), 50);
+        setTimeout(() => this.loop(), 1);
         this.drawScore();
     }
     update(){
