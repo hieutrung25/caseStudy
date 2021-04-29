@@ -13,12 +13,14 @@ class game{
         document.body.appendChild(this.canvas);
         this.snake = new snake(this);
         this.food = new food(this);
-
+    }
+    drawScore(){
     }
     loop(){
         this.update();
         this.draw();
-        setTimeout(() => this.loop(), 60);
+        setTimeout(() => this.loop(), 50);
+        this.drawScore();
     }
     update(){
         this.snake.update();
@@ -30,7 +32,6 @@ class game{
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.snake.draw();
         this.food.draw();
-
     }
 }
 

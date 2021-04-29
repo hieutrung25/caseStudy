@@ -27,14 +27,11 @@ class snake{
             this.y = this.game.canvas.height;
         }
 
-
         this.cell.unshift({x: this.x, y: this.y});
             if (this.cell.length > this.maxCells){
             this.cell.pop();
         }
-
         this.Bottom();
-
     }
     draw(){
         for (let i = 0; i < this.cell.length; i++){
@@ -69,6 +66,8 @@ class snake{
     eat(x,y) {
         if (this.x === x && this.y === y){
             this.maxCells++;
+            score++;
+            document.getElementById('text').innerHTML="Score: "+score;
             return true;
         }
         return false;
